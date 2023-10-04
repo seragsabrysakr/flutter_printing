@@ -70,9 +70,18 @@ class PrinterManager {
     }
   }
 
+  Future<bool> printLogo({required PrinterType type}) async {
+    if (type == PrinterType.bluetooth && Platform.isAndroid) {
+      return await bluetoothPrinterConnector.printLogo();
+    }
+    return false;
+  }
+
   Stream<BTStatus> get stateBluetooth => bluetoothPrinterConnector.currentStatus.cast<BTStatus>();
   Stream<USBStatus> get stateUSB => usbPrinterConnector.currentStatus.cast<USBStatus>();
+  Stream<TCPStatus> get stateTCP => tcpPrinterConnector.currentStatus.cast<TCPStatus>();
 
   BTStatus get currentStatusBT => bluetoothPrinterConnector.status;
   USBStatus get currentStatusUSB => usbPrinterConnector.status;
+  TCPStatus get currentStatusTCP => tcpPrinterConnector.status;
 }

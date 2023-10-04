@@ -1,5 +1,3 @@
-import 'dart:typed_data';
-
 import 'package:flutter/services.dart';
 
 final flutterPrinterChannel = const MethodChannel('com.sersoluciones.flutter_pos_printer_platform');
@@ -11,6 +9,8 @@ final iosStateChannel = const EventChannel('flutter_pos_printer_platform/state')
 enum BTStatus { none, connecting, connected, scanning, stopScanning }
 
 enum USBStatus { none, connecting, connected }
+
+enum TCPStatus { none, connected }
 
 abstract class Printer {
   Future<bool> image(Uint8List image, {int threshold = 150});
@@ -27,6 +27,9 @@ abstract class PrinterConnector<T> {
   Future<bool> send(List<int> bytes);
   Future<bool> connect(T model);
   Future<bool> disconnect({int? delayMs});
+
+  Future<bool> image(Uint8List image, {int threshold = 150});
+  Future<bool> printLogo();
 }
 
 abstract class GenericPrinter<T> extends Printer {
