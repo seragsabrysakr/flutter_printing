@@ -81,14 +81,30 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.0"
-  dart_ping:
+  cupertino_icons:
     dependency: "direct main"
     description:
-      name: dart_ping
-      sha256: "2f5418d0a5c64e53486caaac78677b25725b1e13c33c5be834ce874ea18bd24f"
+      name: cupertino_icons
+      sha256: d57953e10f9f8327ce64a508a355f0b1ec902193f66288e8cb5070e7c47eeb2d
       url: "https://pub.dev"
     source: hosted
-    version: "9.0.1"
+    version: "1.0.6"
+  dart_ping:
+    dependency: transitive
+    description:
+      name: dart_ping
+      sha256: "91ee37e5bf5316caca5bd6f7b6016e73cd861b6a4b99565a2fd89b1d65003e1a"
+      url: "https://pub.dev"
+    source: hosted
+    version: "8.0.1"
+  dart_ping_ios:
+    dependency: "direct main"
+    description:
+      name: dart_ping_ios
+      sha256: ade22dedb8bbe37b6ba69bbfb0cbb36b6a20f55f6a63abcb4583373f9ea8eebd
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.0.0"
   dbus:
     dependency: transitive
     description:
@@ -98,7 +114,7 @@ packages:
     source: hosted
     version: "0.7.8"
   enum_to_string:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: enum_to_string
       sha256: bd9e83a33b754cb43a75b36a9af2a0b92a757bfd9847d2621ca0b1bed45f8e7a
@@ -126,6 +142,29 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_icmp_ping:
+    dependency: transitive
+    description:
+      name: flutter_icmp_ping
+      sha256: de9633cf65a8c733fae29d08a35d3d4b343620cd1d13e1bfa88eccf56696d896
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.1.3"
+  flutter_lints:
+    dependency: "direct dev"
+    description:
+      name: flutter_lints
+      sha256: b543301ad291598523947dc534aaddc5aaad597b709d2426d3a0e0d44c5cb493
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.4"
+  flutter_pos_printer_platform:
+    dependency: "direct main"
+    description:
+      path: ".."
+      relative: true
+    source: path
+    version: "1.4.1"
   flutter_test:
     dependency: "direct dev"
     description: flutter
@@ -137,7 +176,7 @@ packages:
     source: sdk
     version: "0.0.0"
   gbk_codec:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: gbk_codec
       sha256: "3af5311fc9393115e3650ae6023862adf998051a804a08fb804f042724999f61"
@@ -145,7 +184,7 @@ packages:
     source: hosted
     version: "0.4.0"
   hex:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: hex
       sha256: "4e7cd54e4b59ba026432a6be2dd9d96e4c5205725194997193bf871703b82c4a"
@@ -161,7 +200,7 @@ packages:
     source: hosted
     version: "0.15.4"
   image:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: image
       sha256: "028f61960d56f26414eb616b48b04eb37d700cbe477b7fb09bf1d7ce57fd9271"
@@ -176,6 +215,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.6.7"
+  lints:
+    dependency: transitive
+    description:
+      name: lints
+      sha256: a2c3d198cb5ea2e179926622d433331d8b58374ab8f29cdda6e863bd62fd369c
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.1"
   matcher:
     dependency: transitive
     description:
@@ -201,7 +248,7 @@ packages:
     source: hosted
     version: "1.9.1"
   network_info_plus:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: network_info_plus
       sha256: c0113bfd4276be3fe4ba56aeb2792d780df9f3f62aaa4afdd1cdf716b8e29545
@@ -241,7 +288,7 @@ packages:
     source: hosted
     version: "5.4.0"
   ping_discover_network_forked:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: ping_discover_network_forked
       sha256: d3975c4f3fbaa388f78fb4037ad9c33059d8e2ec0e804ed45e05277d2451fe77
@@ -265,7 +312,7 @@ packages:
     source: hosted
     version: "3.7.3"
   rxdart:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: rxdart
       sha256: "93bca4fe609a74c7fd162d23510dd08281e3c1b1b3cff7db99dbe57108c82cdf"
@@ -366,5 +413,5 @@ packages:
     source: hosted
     version: "6.3.0"
 sdks:
-  dart: ">=3.1.0-185.0.dev <4.0.0"
+  dart: ">=3.1.0-185.0.dev <3.3.10"
   flutter: ">=3.3.0"
